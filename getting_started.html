@@ -1,0 +1,316 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pi_waveshare_adc &mdash; pi_waveshare_adc  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API" href="api.html" />
+    <link rel="prev" title="Welcome to pi_waveshare_adc’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pi_waveshare_adc
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pi_waveshare_adc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#backends">Backends</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#higher-performance-chunked-sampling">Higher performance chunked sampling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#performance-and-data-corruption-considerations">Performance and Data Corruption Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pi_waveshare_adc</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>pi_waveshare_adc</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/getting_started.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pi-waveshare-adc">
+<h1>pi_waveshare_adc<a class="headerlink" href="#pi-waveshare-adc" title="Permalink to this headline">¶</a></h1>
+<p>A performant Python library to read the Raspberry Pi Waveshare ADC expansion board.</p>
+<p>Complete documentation is <a class="reference external" href="https://matham.github.io/pi_waveshare_adc/index.html">here</a></p>
+<a class="reference external image-reference" href="https://pypi.python.org/pypi/pi_waveshare_adc/"><img alt="Supported Python versions" src="https://img.shields.io/pypi/pyversions/pi_waveshare_adc.svg" /></a>
+<a class="reference external image-reference" href="https://pypi.python.org/pypi/pi_waveshare_adc/"><img alt="Latest Version on PyPI" src="https://img.shields.io/pypi/v/pi_waveshare_adc.svg" /></a>
+<a class="reference external image-reference" href="https://coveralls.io/github/matham/pi_waveshare_adc?branch=master"><img alt="Coverage status" src="https://coveralls.io/repos/github/matham/pi_waveshare_adc/badge.svg?branch=master" /></a>
+<a class="reference external image-reference" href="https://github.com/matham/pi_waveshare_adc/actions"><img alt="Github action status" src="https://github.com/matham/pi_waveshare_adc/workflows/Python%20application/badge.svg" /></a>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">pi_waveshare_adc</span></code> is a Python 3+ library for controlling and sampling the Raspberry Pi
+<a class="reference external" href="https://www.waveshare.com/wiki/High-Precision_AD/DA_Board">Waveshare High-Precision AD/DA Expansion Board</a>
+built around the 8-channel 24 bit 30Khz <a class="reference external" href="https://www.ti.com/product/ADS1256">ADS1256</a> ADC.</p>
+<p>It is based on the <a class="reference external" href="https://github.com/ul-gh/PiPyADC/">PiPyADC</a> library, but has been internally converted
+to Cython for C performance to achieve full 30Khz sampling. Additionally, it supports
+either the <a class="reference external" href="https://github.com/WiringPi/WiringPi">WiringPi</a> or a new
+<a class="reference external" href="https://github.com/joan2937/pigpio">PiGPIO</a> backend, now that WiringPi has been deprecated.
+Finally, it has a more Pythonic API and has been better proofed against reading corrupted
+samples (although it’s still impossible to fully guarantee since the RPi is not a real-time system).</p>
+<p>This library has been tested on the RPi4 and should similarly work on the RPi3. It relies on the
+multiple cores to be able to sample at full 30kHz. Because at sustained 30kHz, one core is fully
+engaged. So on older RPis will less cores it may not function well. However, sampling at lower
+frequencies (<code class="docutils literal notranslate"><span class="pre">&lt;</span> <span class="pre">1kHz</span></code>) is much gentler on the CPU (see class docs for CPU sleep details).</p>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>To install <code class="docutils literal notranslate"><span class="pre">pi_waveshare_adc</span></code>, ensure python and pigpio is installed properly with
+(WiringPi should be pre-installed, otherwise please install it from source):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">python3</span> <span class="n">python3</span><span class="o">-</span><span class="n">dev</span> <span class="n">python3</span><span class="o">-</span><span class="n">pip</span> <span class="n">python3</span><span class="o">-</span><span class="n">pigpio</span> <span class="n">pigpio</span>
+</pre></div>
+</div>
+</li>
+<li><p>Install <code class="docutils literal notranslate"><span class="pre">pi_waveshare_adc</span></code> with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pi_waveshare_adc</span>
+<span class="c1"># or until the next release to pypi you can get it directly from github with</span>
+<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">matham</span><span class="o">/</span><span class="n">pi_waveshare_adc</span><span class="o">/</span><span class="n">archive</span><span class="o">/</span><span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">master</span><span class="o">.</span><span class="n">zip</span>
+</pre></div>
+</div>
+</li>
+<li><p>Ensure the SPI interface is enabled on the RPi by running <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">raspi-config</span></code> and enabling it
+in the interfaces option.</p></li>
+</ul>
+</div>
+<div class="section" id="backends">
+<h2>Backends<a class="headerlink" href="#backends" title="Permalink to this headline">¶</a></h2>
+<p>There are two backends <code class="docutils literal notranslate"><span class="pre">pigpio</span></code> or <code class="docutils literal notranslate"><span class="pre">wiringpi</span></code> selected by instantiating the <code class="docutils literal notranslate"><span class="pre">WiringPiADS1256</span></code>
+or <code class="docutils literal notranslate"><span class="pre">PiGPIOADS1256</span></code> class, respectively.</p>
+<p>In testing on the RPI4, the <code class="docutils literal notranslate"><span class="pre">pigpio</span></code> was significantly faster than the <code class="docutils literal notranslate"><span class="pre">wiringpi</span></code> backend (more than
+3x faster on SPI, slightly slower reading the GPIO). Consequently, it is able to sample at higher
+frequencies and more consistently achieve <code class="docutils literal notranslate"><span class="pre">30kHz</span></code>.</p>
+<p>Unfortunately, to use <code class="docutils literal notranslate"><span class="pre">pigpio</span></code>, Python needs to be run with <code class="docutils literal notranslate"><span class="pre">sudo</span></code> permissions because we
+use <code class="docutils literal notranslate"><span class="pre">pigpio</span></code> directly for better performance rather than the daemon. If you get the following
+error:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2020</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">02</span> <span class="mi">01</span><span class="p">:</span><span class="mi">44</span><span class="p">:</span><span class="mi">41</span> <span class="n">initCheckPermitted</span><span class="p">:</span>
+<span class="o">+---------------------------------------------------------+</span>
+<span class="o">|</span><span class="n">Sorry</span><span class="p">,</span> <span class="n">you</span> <span class="n">don</span><span class="s1">&#39;t have permission to run this program.    |</span>
+<span class="o">|</span><span class="n">Try</span> <span class="n">running</span> <span class="k">as</span> <span class="n">root</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">precede</span> <span class="n">the</span> <span class="n">command</span> <span class="k">with</span> <span class="n">sudo</span><span class="o">.</span> <span class="o">|</span>
+<span class="o">+---------------------------------------------------------+</span>
+</pre></div>
+</div>
+<p>It means you forgot to use sudo. So use e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">python3</span> <span class="n">example</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>Hardware pin configuration must be
+set up before initialization phase and can not be changed later.</p>
+<p>Register/Configuration Flag settings are initialized, but these
+can be changed during runtime via class properties.</p>
+<div class="section" id="higher-performance-chunked-sampling">
+<h3>Higher performance chunked sampling<a class="headerlink" href="#higher-performance-chunked-sampling" title="Permalink to this headline">¶</a></h3>
+<p>See.</p>
+</div>
+</div>
+<div class="section" id="performance-and-data-corruption-considerations">
+<h2>Performance and Data Corruption Considerations<a class="headerlink" href="#performance-and-data-corruption-considerations" title="Permalink to this headline">¶</a></h2>
+<p>Data could be corrupt if it’s taking too long to read e.g. if the pi
+hiccups and sampling rate is too large and we read while data is updated.
+This is especially the case when muxing.</p>
+<p>Our sleep has minimum about 100 us resolution. So e.g. at 30kHz, we can’t
+afford to sleep while waiting for the input to change, because the time
+between samples is 1 / 30kHz = 33us so if we sleep we’ll miss samples.
+Even at 1kHz sampling, we only have 1000us between samples or about 8-9
+sleep cycles. So if we sleep too long, by the time we finish reading the
+sample the next sample may already be converted and our read value would be
+corrupted.</p>
+<p>Consequently, we only sleep if the sampling rate is less than 500Hz.
+Because with 2000 us between samples we have 15-20 sleep cycles available,
+so the risk is much much less.</p>
+<p>The consequence is that when sampling above 500Hz, the CPU will not get
+any sleep if we do e.g. chunked reading. This is not a problem on e.g. a pi
+4 with 4 cores. <code class="xref py py-attr docutils literal notranslate"><span class="pre">do_data_ready_delay</span></code> controls this behavior.
+If the rate is less than or equal to 500Hz and <code class="xref py py-attr docutils literal notranslate"><span class="pre">do_data_ready_delay</span></code>
+is True (the default) then we do a minimum sleep while waiting. Otherwise,
+we never sleep.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="api.html" class="btn btn-neutral float-right" title="API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to pi_waveshare_adc’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Matthew Einhorn.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

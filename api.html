@@ -1,0 +1,937 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>API &mdash; pi_waveshare_adc  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="pi_waveshare_adc" href="getting_started.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pi_waveshare_adc
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">pi_waveshare_adc</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pi-waveshare-adc">pi_waveshare_adc</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pi_waveshare_adc</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api">
+<span id="id1"></span><h1>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-pi_waveshare_adc"></span><div class="section" id="pi-waveshare-adc">
+<h2>pi_waveshare_adc<a class="headerlink" href="#pi-waveshare-adc" title="Permalink to this headline">¶</a></h2>
+<p>A performant Python library to read the RPi Waveshare ADC expansion board.</p>
+<dl class="py class">
+<dt id="pi_waveshare_adc.ADS1256">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pi_waveshare_adc.</span></code><code class="sig-name descname"><span class="pre">ADS1256</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cs_pin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_ready_pin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reset_pin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_down_pin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spi_frequency</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1920000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spi_channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clock_frequency</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">7680000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_data_ready_delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_ready_timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base class for the ADC.</p>
+<dl class="py attribute">
+<dt id="pi_waveshare_adc.ADS1256.adc_config">
+<code class="sig-name descname"><span class="pre">adc_config</span></code><a class="headerlink" href="#pi_waveshare_adc.ADS1256.adc_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get/Set value of the ADC configuration register, REG_ADCON.</p>
+<p>Reading or setting it will cause a read/write to the REG_ADCON register.</p>
+<p>Defaults to disable clk out signal (not needed, source of disturbance),
+sensor detect current sources disabled, and GAIN_1 gain.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When changing the adc config setting at runtime, with
+status ACAL flag (AUTOCAL_ENABLE) ON, this causes a wait for data
+ready for the calibration process to finish.</p>
+<p>If ACAL is disabled (the default), a manual calibration is
+recommended after changing the adc config.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.cal_self">
+<code class="sig-name descname"><span class="pre">cal_self</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.cal_self" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform an input zero and full-scale two-point-calibration
+using chip-internal circuitry connected to VREFP and VREFN.</p>
+<p>Sets the ADS1255/ADS1256 OFC and FSC registers.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.cal_self_gain">
+<code class="sig-name descname"><span class="pre">cal_self_gain</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.cal_self_gain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform an input full-scale calibration
+using chip-internal circuitry connected to VREFP and VREFN.</p>
+<p>Sets the ADS1255/ADS1256 FSC register.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.cal_self_offset">
+<code class="sig-name descname"><span class="pre">cal_self_offset</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.cal_self_offset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform an input zero calibration using chip-internal
+reference switches.</p>
+<p>Sets the ADS1255/ADS1256 OFC register.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.cal_system_gain">
+<code class="sig-name descname"><span class="pre">cal_system_gain</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.cal_system_gain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the ADS1255/ADS1256 FSC register such that the current
+input voltage corresponds to a full-scale output value.
+The input multiplexer must be set to the appropriate pins first.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.cal_system_offset">
+<code class="sig-name descname"><span class="pre">cal_system_offset</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.cal_system_offset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the ADS1255/ADS1256 OFC register such that the
+current input voltage corresponds to a zero output value.
+The input multiplexer must be set to the appropriate pins first.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pi_waveshare_adc.ADS1256.chip_ID">
+<code class="sig-name descname"><span class="pre">chip_ID</span></code><a class="headerlink" href="#pi_waveshare_adc.ADS1256.chip_ID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the 4 bit numeric ID from the ADS chip.
+Useful to check if hardware is connected.</p>
+<p>Reading or setting it will cause a read/write to the status register.</p>
+<p>Value for the ADS1256 on the Waveshare board seems to be a 3.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.chip_release">
+<code class="sig-name descname"><span class="pre">chip_release</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.chip_release" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Part of the low-level API) Releases the chip selection if using
+the CS pin and does the proper timeout.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.chip_select">
+<code class="sig-name descname"><span class="pre">chip_select</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.chip_select" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Part of the low-level API) Selects the chip if using the CS pin.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.chunked_sampling">
+<code class="sig-name descname"><span class="pre">chunked_sampling</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">chunk_size</span></em>, <em class="sig-param"><span class="pre">double</span> <span class="pre">read_timeout</span></em>, <em class="sig-param"><span class="pre">double</span> <span class="pre">stop_timeout</span></em>, <em class="sig-param"><span class="pre">*channels_flags</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.chunked_sampling" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pi_waveshare_adc.ADS1256.clock_frequency">
+<code class="sig-name descname"><span class="pre">clock_frequency</span></code><a class="headerlink" href="#pi_waveshare_adc.ADS1256.clock_frequency" title="Permalink to this definition">¶</a></dt>
+<dd><p>clock_frequency: ‘int’
+Master crystal clock rate in Hz. Default is 7680000 for the Waveshare</p>
+<blockquote>
+<div><p>board.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This can be set as a constructor parameter to overwrite the default or 
+by setting the property directly before the adc is initialized.</p>
+</div>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pi_waveshare_adc.ADS1256.cs_pin">
+<code class="sig-name descname"><span class="pre">cs_pin</span></code><a class="headerlink" href="#pi_waveshare_adc.ADS1256.cs_pin" title="Permalink to this definition">¶</a></dt>
+<dd><p>cs_pin: ‘char’
+The RPI GPIOs chip select pin number. On the Waveshare board it must be</p>
+<blockquote>
+<div><p>specified because the SPI CS pin is not connected to the ADC CS pin.</p>
+<p>If the the CS pin of the SPI bus is connected to the ADC CS pin, this
+should be set to -1 and it won’t be used.</p>
+<p>The value should match the numbering system used by the backend 
+(e.g. WiringPi or pigpio). It is defaulted to the correct value for each
+backend.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This can be set as a constructor parameter to overwrite the default or 
+by setting the property directly before the adc is initialized.</p>
+</div>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pi_waveshare_adc.ADS1256.data_rate">
+<code class="sig-name descname"><span class="pre">data_rate</span></code><a class="headerlink" href="#pi_waveshare_adc.ADS1256.data_rate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get/Set value of the ADC output sample data rate by setting
+the DRATE register (REG_DRATE). This configures the hardware integrated
+moving average filter.</p>
+<p>Reading or setting it will cause a read/write to the DRATE register.</p>
+<p>Valid values are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="mf">15.0</span><span class="p">,</span> <span class="mf">25.0</span><span class="p">,</span> <span class="mf">30.0</span><span class="p">,</span> <span class="mf">50.0</span><span class="p">,</span> <span class="mf">60.0</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">,</span> <span class="mf">500.0</span><span class="p">,</span> <span class="mf">1000.0</span><span class="p">,</span> <span class="mf">2000.0</span><span class="p">,</span> <span class="mf">3750.0</span><span class="p">,</span> <span class="mf">7500.0</span><span class="p">,</span> <span class="mf">15000.0</span><span class="p">,</span> <span class="mf">30000.0</span>
+</pre></div>
+</div>
+<p>Defaults to 10 SPS which places a filter zero at 50 Hz and 60 Hz for line
+noise rejection.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When changing the data rate setting at runtime, with
+status ACAL flag (AUTOCAL_ENABLE) ON, this causes a wait for data
+ready for the calibration process to finish.</p>
+<p>If ACAL is disabled (the default), a manual calibration is
+recommended after changing the data rate.</p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pi_waveshare_adc.ADS1256.data_ready_pin">
+<code class="sig-name descname"><span class="pre">data_ready_pin</span></code><a class="headerlink" href="#pi_waveshare_adc.ADS1256.data_ready_pin" title="Permalink to this definition">¶</a></dt>
+<dd><p>data_ready_pin: ‘char’
+The RPI GPIOs data ready pin number.</p>
+<blockquote>
+<div><p>The value should match the numbering system used by the backend 
+(e.g. WiringPi or pigpio). It is defaulted to the correct value for each
+backend.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This can be set as a constructor parameter to overwrite the default or 
+by setting the property directly before the adc is initialized.</p>
+</div>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pi_waveshare_adc.ADS1256.data_ready_timeout">
+<code class="sig-name descname"><span class="pre">data_ready_timeout</span></code><a class="headerlink" href="#pi_waveshare_adc.ADS1256.data_ready_timeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>data_ready_timeout: ‘double’
+Seconds to wait in case the chip does not respond.</p>
+<blockquote>
+<div><p>See table 21 of ADS1256 datasheet: When using a
+sample rate of 2.5 SPS and issuing a self calibration command,
+the timeout can be up to 1228 milliseconds</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This can be set as a constructor parameter to overwrite the default or 
+by setting the property directly before the adc is initialized.</p>
+</div>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.debug_measure_sleep_resolution">
+<code class="sig-name descname"><span class="pre">debug_measure_sleep_resolution</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">unsigned</span> <span class="pre">int</span> <span class="pre">us</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">count</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.debug_measure_sleep_resolution" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pi_waveshare_adc.ADS1256.do_data_ready_delay">
+<code class="sig-name descname"><span class="pre">do_data_ready_delay</span></code><a class="headerlink" href="#pi_waveshare_adc.ADS1256.do_data_ready_delay" title="Permalink to this definition">¶</a></dt>
+<dd><p>do_data_ready_delay: ‘int’
+Whether we sleep while waiting for new data when the sampling rate</p>
+<blockquote>
+<div><p>is 500Hz or less. See class description for details.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pi_waveshare_adc.ADS1256.fsc">
+<code class="sig-name descname"><span class="pre">fsc</span></code><a class="headerlink" href="#pi_waveshare_adc.ADS1256.fsc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get/Set the three full-scale adjustment registers, FSC0..2.</p>
+<p>Reading or setting it will cause a read/write to the FSC0..2 registers.</p>
+<p>This property is a unsigned integer value representing a 24-bit value
+in three 8-bit-registers.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pi_waveshare_adc.ADS1256.gpio">
+<code class="sig-name descname"><span class="pre">gpio</span></code><a class="headerlink" href="#pi_waveshare_adc.ADS1256.gpio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the logic level or direction of the four GPIO pins from
+the REG_IO register.</p>
+<p>Reading or setting it will cause a read/write to the REG_IO register.</p>
+<p>The most significant four bits represent the
+pin direction, and the least significant four bits determine
+the output logic level.</p>
+<p>A timeout/debounce for the reading is not implemented.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pi_waveshare_adc.ADS1256.mux">
+<code class="sig-name descname"><span class="pre">mux</span></code><a class="headerlink" href="#pi_waveshare_adc.ADS1256.mux" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get/Set value of ADC analog input multiplexer register,
+REG_MUX, used for selecting any arbitrary pair of input pins defined in
+the <code class="docutils literal notranslate"><span class="pre">AnalogInput</span></code> enum as a differential input channel. For
+single-ended measurements, choose NEG_AINCOM as the second input pin.</p>
+<p>Reading or setting it will cause a read/write to the REG_MUX register.</p>
+<p>Example: <code class="docutils literal notranslate"><span class="pre">adc.mux</span> <span class="pre">=</span> <span class="pre">POS_AIN4</span> <span class="pre">|</span> <span class="pre">NEG_AINCOM</span></code>.</p>
+<p>Defaults to positive input = <code class="docutils literal notranslate"><span class="pre">AIN0</span></code>, negative input = <code class="docutils literal notranslate"><span class="pre">AINCOM</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pi_waveshare_adc.ADS1256.ofc">
+<code class="sig-name descname"><span class="pre">ofc</span></code><a class="headerlink" href="#pi_waveshare_adc.ADS1256.ofc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get/Set the three offset compensation registers, OFC0..2.</p>
+<p>Reading or setting it will cause a read/write to the OFC0..2 registers.</p>
+<p>This property is a signed integer value representing a 24-bit two’s
+complement value in three 8-bit-registers.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pi_waveshare_adc.ADS1256.pga_gain">
+<code class="sig-name descname"><span class="pre">pga_gain</span></code><a class="headerlink" href="#pi_waveshare_adc.ADS1256.pga_gain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get/Set ADC programmable gain amplifier which controls the input
+voltage range.</p>
+<p>Reading or setting it will cause a read/write to the ADCON register.</p>
+<p>The available options for the ADS1256 are:
+1, 2, 4, 8, 16, 32 and 64. The range is 2 * Vref / gain so with the
+built in 2.5V Vref, the input range is:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 68%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Gain</p></th>
+<th class="head"><p>Input Voltage</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>±5V</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>±2.5V</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>±1.25V</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>±0.625V</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>±312.5mV</p></td>
+</tr>
+<tr class="row-odd"><td><p>32</p></td>
+<td><p>±156.25mV</p></td>
+</tr>
+<tr class="row-even"><td><p>64</p></td>
+<td><p>±78.125mV</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When changing the gain setting at runtime, with
+status ACAL flag (AUTOCAL_ENABLE) ON, this causes a wait for data
+ready for the calibration process to finish.</p>
+<p>If ACAL is disabled (the default), a manual calibration is
+recommended after changing the gain.</p>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Gain</span> <span class="pre">=</span> <span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">V_ref</span> <span class="pre">=</span> <span class="pre">2.5V</span></code> ==&gt; full-scale input voltage = <code class="docutils literal notranslate"><span class="pre">5.00V</span></code>,
+corresponding to a 24-bit two’s complement output value of
+<code class="docutils literal notranslate"><span class="pre">2**23</span> <span class="pre">-</span> <span class="pre">1</span> <span class="pre">=</span> <span class="pre">8388607</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.power_down">
+<code class="sig-name descname"><span class="pre">power_down</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.power_down" title="Permalink to this definition">¶</a></dt>
+<dd><p>Powers down the chip.</p>
+<p>It doesn’t wait for it to actually power down, which the chip will do
+after some time (20 DRDY cycles, see datasheet).</p>
+<p>The chip is automatically powered up when it is initialized with
+<a class="reference internal" href="#pi_waveshare_adc.ADS1256.setup_adc" title="pi_waveshare_adc.ADS1256.setup_adc"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_adc()</span></code></a> or <code class="xref py py-meth docutils literal notranslate"><span class="pre">run_adc()</span></code>. So to power it back up, you’ll
+have to release it and then set it up again.</p>
+<p>Use this just before <code class="xref py py-meth docutils literal notranslate"><span class="pre">run_adc()</span></code> exits or before calling
+<a class="reference internal" href="#pi_waveshare_adc.ADS1256.release_adc" title="pi_waveshare_adc.ADS1256.release_adc"><code class="xref py py-meth docutils literal notranslate"><span class="pre">release_adc()</span></code></a> so the ADC will power down when you’re done.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pi_waveshare_adc.ADS1256.power_down_pin">
+<code class="sig-name descname"><span class="pre">power_down_pin</span></code><a class="headerlink" href="#pi_waveshare_adc.ADS1256.power_down_pin" title="Permalink to this definition">¶</a></dt>
+<dd><p>power_down_pin: ‘char’
+The RPI GPIOs power down pin number.</p>
+<blockquote>
+<div><p>The value should match the numbering system used by the backend 
+(e.g. WiringPi or pigpio). It is defaulted to the correct value for each
+backend.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This can be set as a constructor parameter to overwrite the default or 
+by setting the property directly before the adc is initialized.</p>
+</div>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.read_next_sample">
+<code class="sig-name descname"><span class="pre">read_next_sample</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">safe=True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.read_next_sample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read ADC result from the current channel as soon as possible.</p>
+<p>Returns the signed integer ADC conversion result.</p>
+<p>This waits until we see a new sample arrive to make sure we don’t read
+during sampling and get a bad value. So this is slower. Use chunked
+reading for better performance.</p>
+<p>If not safe, we don’t wait for the new sample, but start immediately
+if there seems to be a current sample.</p>
+<p>Issue this command to read a single conversion result for a
+previously set /and stable/ input channel configuration.</p>
+<p>For the default, free-running mode of the ADC, this means
+invalid data is returned when not synchronising acquisition
+and input channel configuration changes.</p>
+<p>To avoid this, after changing input channel configuration or
+with an external hardware multiplexer, use the hardware SYNC
+input pin or use the sync() method to restart the
+conversion cycle before calling read_async().</p>
+<p>Because this function does not implicitly restart a running
+acquisition, it is faster that the read_oneshot() method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.read_next_sample_switch_channel">
+<code class="sig-name descname"><span class="pre">read_next_sample_switch_channel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">channel_flag</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">safe=True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.read_next_sample_switch_channel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.read_reg">
+<code class="sig-name descname"><span class="pre">read_reg</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">register</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.read_reg" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Part of the low-level API) Returns data byte read from the
+specified register address byte.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.read_sample_from_standby">
+<code class="sig-name descname"><span class="pre">read_sample_from_standby</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.read_sample_from_standby" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Only safe</strong> if it is in standby mode.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.read_sample_trigger">
+<code class="sig-name descname"><span class="pre">read_sample_trigger</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.read_sample_trigger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Restart the ADC conversion cycle.</p>
+<p>Similar to read_next_sample, but instead of waiting to see a new sample
+arrive we trigger a new sample to be generated. Useful if the
+input changed or configuration changed and we want a new sample, but
+e.g. the sampling rate is low and we don’t want to wait for a new
+sample.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.release_adc">
+<code class="sig-name descname"><span class="pre">release_adc</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.release_adc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Releases resources setup in <a class="reference internal" href="#pi_waveshare_adc.ADS1256.setup_adc" title="pi_waveshare_adc.ADS1256.setup_adc"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_adc()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.reset">
+<code class="sig-name descname"><span class="pre">reset</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset all registers except CLK0 and CLK1 bits.</p>
+<p>It waits until the reset is complete.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pi_waveshare_adc.ADS1256.reset_pin">
+<code class="sig-name descname"><span class="pre">reset_pin</span></code><a class="headerlink" href="#pi_waveshare_adc.ADS1256.reset_pin" title="Permalink to this definition">¶</a></dt>
+<dd><p>reset_pin: ‘char’
+The RPI GPIOs reset pin number. It is not currently used, except to set</p>
+<blockquote>
+<div><p>to high.</p>
+<p>The value should match the numbering system used by the backend 
+(e.g. WiringPi or pigpio). It is defaulted to the correct value for each
+backend.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This can be set as a constructor parameter to overwrite the default or 
+by setting the property directly before the adc is initialized.</p>
+</div>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.set_sampling_channel">
+<code class="sig-name descname"><span class="pre">set_sampling_channel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">channel_flag</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.set_sampling_channel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the channel the ADC will sample.</p>
+<p>This can be followed by <a class="reference internal" href="#pi_waveshare_adc.ADS1256.read_sample_trigger" title="pi_waveshare_adc.ADS1256.read_sample_trigger"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read_sample_trigger()</span></code></a>,
+<a class="reference internal" href="#pi_waveshare_adc.ADS1256.standby" title="pi_waveshare_adc.ADS1256.standby"><code class="xref py py-meth docutils literal notranslate"><span class="pre">standby()</span></code></a> + <a class="reference internal" href="#pi_waveshare_adc.ADS1256.read_sample_from_standby" title="pi_waveshare_adc.ADS1256.read_sample_from_standby"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read_sample_from_standby()</span></code></a>, or
+<a class="reference internal" href="#pi_waveshare_adc.ADS1256.read_next_sample" title="pi_waveshare_adc.ADS1256.read_next_sample"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read_next_sample()</span></code></a> (but only when safe=True).</p>
+<p>To sample from multiple channels, we need to multiplex the signals
+by switching the current channel and then sampling.
+See also <a class="reference internal" href="#pi_waveshare_adc.ADS1256.read_next_sample_switch_channel" title="pi_waveshare_adc.ADS1256.read_next_sample_switch_channel"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read_next_sample_switch_channel()</span></code></a> or
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">start_chunked_multiplexed_sampling()</span></code> for a more efficient
+approach.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.setup_adc">
+<code class="sig-name descname"><span class="pre">setup_adc</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.setup_adc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the ADC so it is ready to be sampled or configured.</p>
+<p>Each <a class="reference internal" href="#pi_waveshare_adc.ADS1256.setup_adc" title="pi_waveshare_adc.ADS1256.setup_adc"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_adc()</span></code></a> must be followed by a <a class="reference internal" href="#pi_waveshare_adc.ADS1256.release_adc" title="pi_waveshare_adc.ADS1256.release_adc"><code class="xref py py-meth docutils literal notranslate"><span class="pre">release_adc()</span></code></a> when
+done with the ADC, before <a class="reference internal" href="#pi_waveshare_adc.ADS1256.setup_adc" title="pi_waveshare_adc.ADS1256.setup_adc"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_adc()</span></code></a> can be called again or
+before exiting python.</p>
+<p>E.g. a valid sequence is <code class="docutils literal notranslate"><span class="pre">setup</span> <span class="pre">-&gt;</span> <span class="pre">sampling</span> <span class="pre">-&gt;</span> <span class="pre">release</span> <span class="pre">-&gt;</span> <span class="pre">setup</span> <span class="pre">-&gt;</span>
+<span class="pre">sampling</span> <span class="pre">-&gt;</span> <span class="pre">release</span> <span class="pre">-&gt;</span> <span class="pre">...</span></code>.</p>
+<p>You should consider using the context manager because it’s safer and
+more pythonic.</p>
+<p>E.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">adc</span> <span class="o">=</span> <span class="n">ADC</span><span class="p">()</span>
+<span class="k">with</span> <span class="n">adc</span><span class="p">:</span>
+    <span class="n">adc</span><span class="o">.</span><span class="n">cal_self</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>It handles safely calling <a class="reference internal" href="#pi_waveshare_adc.ADS1256.setup_adc" title="pi_waveshare_adc.ADS1256.setup_adc"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setup_adc()</span></code></a> and <a class="reference internal" href="#pi_waveshare_adc.ADS1256.release_adc" title="pi_waveshare_adc.ADS1256.release_adc"><code class="xref py py-meth docutils literal notranslate"><span class="pre">release_adc()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pi_waveshare_adc.ADS1256.spi_channel">
+<code class="sig-name descname"><span class="pre">spi_channel</span></code><a class="headerlink" href="#pi_waveshare_adc.ADS1256.spi_channel" title="Permalink to this definition">¶</a></dt>
+<dd><p>spi_channel: ‘int’
+The chip select hardware bin controlled by the SPI hardware.</p>
+<blockquote>
+<div><p>For the Waveshare board this pin is not even connected, so we don’t
+use hardware-controlled CS but <a class="reference internal" href="#pi_waveshare_adc.ADS1256.cs_pin" title="pi_waveshare_adc.ADS1256.cs_pin"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cs_pin</span></code></a> instead.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This can be set as a constructor parameter to overwrite the default or 
+by setting the property directly before the adc is initialized.</p>
+</div>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pi_waveshare_adc.ADS1256.spi_frequency">
+<code class="sig-name descname"><span class="pre">spi_frequency</span></code><a class="headerlink" href="#pi_waveshare_adc.ADS1256.spi_frequency" title="Permalink to this definition">¶</a></dt>
+<dd><p>spi_frequency: ‘unsigned int’
+SPI clock rate in Hz.</p>
+<blockquote>
+<div><p>The ADS1256 supports a minimum of 1/10th of the output
+sample data rate in Hz to 1/4th of the oscillator CLKIN_FREQUENCY which
+results in a value of 1920000 Hz for the Waveshare board.</p>
+<p>1920000 is used directly, and works on recent RPIs which doesn’t require it 
+be a power of two.</p>
+<p>The value should match the SPI frequency used by the backend 
+(e.g. WiringPi or pigpio). It is defaulted to the correct value for each
+backend.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This can be set as a constructor parameter to overwrite the default or 
+by setting the property directly before the adc is initialized.</p>
+</div>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.standby">
+<code class="sig-name descname"><span class="pre">standby</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.standby" title="Permalink to this definition">¶</a></dt>
+<dd><p>Put chip in low-power standby mode.</p>
+<p>Call this to enter the low-power state if you are pausing sampling,
+and don’t want to power down and then reset the chip.</p>
+<p>Wake it up with <a class="reference internal" href="#pi_waveshare_adc.ADS1256.wakeup" title="pi_waveshare_adc.ADS1256.wakeup"><code class="xref py py-meth docutils literal notranslate"><span class="pre">wakeup()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.start_chunked_sampling">
+<code class="sig-name descname"><span class="pre">start_chunked_sampling</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">chunk_size</span></em>, <em class="sig-param"><span class="pre">*channels_flags</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.start_chunked_sampling" title="Permalink to this definition">¶</a></dt>
+<dd><p>chunk size should support at least a few ms of data, otherwise data
+will probably be missed.</p>
+<p>This optimizes single channels sampling vs multiplexed.</p>
+<p>If 2 * channels_flags * chunk_size * 3 is too large we run out of memory.</p>
+<p>The total rate is as follows.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Data rate set</p></th>
+<th class="head"><p>Combined Throughput</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>30,000</p></td>
+<td><p>4374</p></td>
+</tr>
+<tr class="row-odd"><td><p>15,000</p></td>
+<td><p>3817</p></td>
+</tr>
+<tr class="row-even"><td><p>7500</p></td>
+<td><p>3043</p></td>
+</tr>
+<tr class="row-odd"><td><p>3750</p></td>
+<td><p>2165</p></td>
+</tr>
+<tr class="row-even"><td><p>2000</p></td>
+<td><p>1438</p></td>
+</tr>
+<tr class="row-odd"><td><p>1000</p></td>
+<td><p>837</p></td>
+</tr>
+<tr class="row-even"><td><p>500</p></td>
+<td><p>456</p></td>
+</tr>
+<tr class="row-odd"><td><p>100</p></td>
+<td><p>98</p></td>
+</tr>
+<tr class="row-even"><td><p>60</p></td>
+<td><p>59</p></td>
+</tr>
+<tr class="row-odd"><td><p>50</p></td>
+<td><p>50</p></td>
+</tr>
+<tr class="row-even"><td><p>30</p></td>
+<td><p>30</p></td>
+</tr>
+<tr class="row-odd"><td><p>25</p></td>
+<td><p>25</p></td>
+</tr>
+<tr class="row-even"><td><p>15</p></td>
+<td><p>15</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>2.5</p></td>
+<td><p>2.5</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pi_waveshare_adc.ADS1256.status">
+<code class="sig-name descname"><span class="pre">status</span></code><a class="headerlink" href="#pi_waveshare_adc.ADS1256.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get/Set value of ADC status register, REG_STATUS (8 bit).</p>
+<p>Reading or setting it will cause a read/write to the REG_STATUS register.</p>
+<p>For available settings flag options, see datasheet.</p>
+<p>Note: When enabling the AUTOCAL flag (OFF by default), any subsequent
+change to the BUFEN bit, DRATE register
+(data_rate property) or PGA gain setting (gain property) will cause
+an additional delay for completion of hardware auto-calibration.</p>
+<p>Note: BUFFER_ENABLE (off by default) means the ADC input voltage range
+is limited to (<code class="docutils literal notranslate"><span class="pre">AVDD-2V</span></code>),see datasheet</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.stop_chunked_sampling">
+<code class="sig-name descname"><span class="pre">stop_chunked_sampling</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">double</span> <span class="pre">timeout</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.stop_chunked_sampling" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pi_waveshare_adc.ADS1256.v_per_digit">
+<code class="sig-name descname"><span class="pre">v_per_digit</span></code><a class="headerlink" href="#pi_waveshare_adc.ADS1256.v_per_digit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get ADC LSB weight in volts per numeric output digit.</p>
+<p>I.e. if the integer value read is <code class="docutils literal notranslate"><span class="pre">+12</span></code>, the the voltage in Volts is
+<code class="docutils literal notranslate"><span class="pre">12</span> <span class="pre">*</span> <span class="pre">v_per_digit</span></code>.</p>
+<p>Readonly: This is a convenience value calculated from
+gain and v_ref setting and <strong>causes</strong> a read of the board register so the
+result should be cached.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pi_waveshare_adc.ADS1256.v_ref">
+<code class="sig-name descname"><span class="pre">v_ref</span></code><a class="headerlink" href="#pi_waveshare_adc.ADS1256.v_ref" title="Permalink to this definition">¶</a></dt>
+<dd><p>v_ref: ‘double’
+ADC analog reference input voltage differential</p>
+<blockquote>
+<div><p>(between VREFH and VREFN pins).
+This is only for calculation of output value scale factor.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.wait_data_ready">
+<code class="sig-name descname"><span class="pre">wait_data_ready</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.wait_data_ready" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Part of the low-level API) Delays until the configured DRDY input
+pin is set LOW by the ADS1256 hardware or until the
+<a class="reference internal" href="#pi_waveshare_adc.ADS1256.data_ready_timeout" title="pi_waveshare_adc.ADS1256.data_ready_timeout"><code class="xref py py-attr docutils literal notranslate"><span class="pre">data_ready_timeout</span></code></a> in seconds has passed.</p>
+<p>The minimum necessary data_ready_timeout when not using the hardware
+pin, can be up to approx. one and a half second, see datasheet.</p>
+<p>Manually invoking this function is necessary when the datasheet calls
+for waiting until data ready is low.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.wait_data_ready_clear">
+<code class="sig-name descname"><span class="pre">wait_data_ready_clear</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.wait_data_ready_clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Part of the low-level API) Delays until the configured DRDY input
+pin is set HIGH by the ADS1256 hardware or until the
+<a class="reference internal" href="#pi_waveshare_adc.ADS1256.data_ready_timeout" title="pi_waveshare_adc.ADS1256.data_ready_timeout"><code class="xref py py-attr docutils literal notranslate"><span class="pre">data_ready_timeout</span></code></a> in seconds has passed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.wait_get_next_sampled_chunk">
+<code class="sig-name descname"><span class="pre">wait_get_next_sampled_chunk</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">double</span> <span class="pre">timeout</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.wait_get_next_sampled_chunk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the raw integers.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.wakeup">
+<code class="sig-name descname"><span class="pre">wakeup</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.wakeup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wake up the chip from standby mode.</p>
+<p>Once woken up, the chip is ready to be sampled again.</p>
+<p>Call <a class="reference internal" href="#pi_waveshare_adc.ADS1256.standby" title="pi_waveshare_adc.ADS1256.standby"><code class="xref py py-meth docutils literal notranslate"><span class="pre">standby()</span></code></a> to enter standby mode again.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pi_waveshare_adc.ADS1256.write_reg">
+<code class="sig-name descname"><span class="pre">write_reg</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">register</span></em>, <em class="sig-param"><span class="pre">unsigned</span> <span class="pre">char</span> <span class="pre">data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ADS1256.write_reg" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Part of the low-level API) Writes data byte to the specified
+register.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pi_waveshare_adc.AnalogInput">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pi_waveshare_adc.</span></code><code class="sig-name descname"><span class="pre">AnalogInput</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.AnalogInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></p>
+<p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="pi_waveshare_adc.ClockOutput">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pi_waveshare_adc.</span></code><code class="sig-name descname"><span class="pre">ClockOutput</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.ClockOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></p>
+<p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="pi_waveshare_adc.CurrentSource">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pi_waveshare_adc.</span></code><code class="sig-name descname"><span class="pre">CurrentSource</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.CurrentSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></p>
+<p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="pi_waveshare_adc.Gain">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pi_waveshare_adc.</span></code><code class="sig-name descname"><span class="pre">Gain</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.Gain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></p>
+<p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="pi_waveshare_adc.PiGPIOADS1256">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pi_waveshare_adc.</span></code><code class="sig-name descname"><span class="pre">PiGPIOADS1256</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cs_pin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">22</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_ready_pin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">17</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reset_pin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">18</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_down_pin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">27</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.PiGPIOADS1256" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pi_waveshare_adc._adc.ADS1256</span></code></p>
+<p>PiGPIO backend.</p>
+<dl class="py method">
+<dt id="pi_waveshare_adc.PiGPIOADS1256.release_adc">
+<code class="sig-name descname"><span class="pre">release_adc</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.PiGPIOADS1256.release_adc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pi_waveshare_adc.Register">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pi_waveshare_adc.</span></code><code class="sig-name descname"><span class="pre">Register</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.Register" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></p>
+<p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="pi_waveshare_adc.RegisterStatus">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pi_waveshare_adc.</span></code><code class="sig-name descname"><span class="pre">RegisterStatus</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.RegisterStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></p>
+<p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="pi_waveshare_adc.SPICommand">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pi_waveshare_adc.</span></code><code class="sig-name descname"><span class="pre">SPICommand</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.SPICommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></p>
+<p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="pi_waveshare_adc.SamplingRate">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pi_waveshare_adc.</span></code><code class="sig-name descname"><span class="pre">SamplingRate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.SamplingRate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></p>
+<p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="pi_waveshare_adc.WiringPiADS1256">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pi_waveshare_adc.</span></code><code class="sig-name descname"><span class="pre">WiringPiADS1256</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cs_pin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_ready_pin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reset_pin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_down_pin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">13</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.WiringPiADS1256" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pi_waveshare_adc._adc.ADS1256</span></code></p>
+<p>WiringPi backend.</p>
+<dl class="py method">
+<dt id="pi_waveshare_adc.WiringPiADS1256.release_adc">
+<code class="sig-name descname"><span class="pre">release_adc</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pi_waveshare_adc.WiringPiADS1256.release_adc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="getting_started.html" class="btn btn-neutral float-left" title="pi_waveshare_adc" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Matthew Einhorn.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
